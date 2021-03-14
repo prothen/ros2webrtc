@@ -1,0 +1,5 @@
+stream:
+    zed:
+        ID:                                 13
+        topic:                              "/zedm/zed_node/right_raw/image_raw_color"
+        frequency:                          0

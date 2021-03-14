@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="config" default="default"/>
+    <arg name="stream_name" default="zed"/>
+    <node name="ros2webrtc_$(arg config)" pkg="ros2webrtc" type="stream.py" output="screen">
+        <rosparam command="load" file="$(find ros2webrtc)/config/$(arg config).yaml"/>
+        <param name="config" value="$(arg config)"/>
+        <param name="stream_name" value="$(arg stream_name)"/>
+    </node>
+</launch>
